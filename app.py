@@ -51,8 +51,9 @@ def calculate_flow_rate(uoperational, D):
   return Q_m3h, Q_nm3h
 
 # Create the Streamlit app
-st.set_page_config(page_title="Gas Pipeline Safe Operational Velocity & Flowrate Calculator",page_icon="👩‍💻",layout="wide")
-st.header("Gas Pipeline Safe Operational Velocity & Flowrate Calculator")
+st.set_page_config(page_title="Gas Pipeline Safe Operation Velocity & Flowrate Calculator",page_icon="👩‍💻",layout="wide")
+st.header("Gas Pipeline Safe Operation Velocity & Flowrate Calculator")
+
 hide_menu_style = """
         <style>
         #MainMenu {visibility: hidden;}
@@ -68,14 +69,14 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-input , output = st.columns(spec=2,gap="large")
+input , output = st.columns(spec=2,gap="Medium")
 
 # Create the input fields
 Z = input.number_input("Compressibility factor (Z)", min_value=0.0, max_value=1.0,value=0.99)
 T = input.number_input("Gas temperature (°C)", min_value=0.0,value=25.0)
-P = input.number_input("Gas pressure (bar.g)", min_value=0.0,value=30.0)
-G = input.number_input("Gas gravity (air = 1.00)", min_value=0.0,value=0.67)
-D = input.number_input("Inner pipe diameter (in)", min_value=0.0,value=8.0)
+P = input.number_input("Gas pressure (bar.g)", min_value=0.0,value=35.0)
+G = input.number_input("Gas gravity (air = 1.00)", min_value=0.0,value=0.7)
+D = input.number_input("Inner pipe diameter (inch)", min_value=0.0,value=8.0)
 
 # Convert the input values to the units used in the equation
 T = convert_temperature_to_rankine(T)
@@ -90,23 +91,13 @@ Q_m3h, Q_nm3h = calculate_flow_rate(uoperational, D)
 umax_ms = convert_velocity_to_ms(umax)
 uoperational_ms = convert_velocity_to_ms(uoperational)
 
-# st.write("Erosional velocity:", f"{umax_ms:,.2f}" , "m/s")
-# st.write("Operational velocity:", f"{uoperational_ms:,.2f}" , "m/s")
-# st.write("Operational flow rate:", f"{Q_nm3h:,.2f}", "NM³/h")
-
 # Display the results
 output.subheader('Results : 👇 ')
-output.divider()
-#output.metric(label="Erosional Velocity (m/s)", value=f"{umax_ms:,.2f}", delta=None)
 output.error("Erosional Velocity (m/s) : " + f"{umax_ms:,.2f}")
-#output.metric(label="Maximum Safe Velocity (m/s)", value=f"{uoperational_ms:,.2f}", delta=None)
-output.warning("Maximum Safe Velocity (m/s) : " + f"{uoperational_ms:,.2f}")
-#output.metric(label="Maximum Safe Flowrate (Nm3/h)", value=f"{Q_nm3h:,.2f}", delta=None)
-output.info("Maximum Safe Flowrate (Nm3/h) : " + f"{Q_nm3h:,.2f}")
+output.warning("Safe Operation Velocity (m/s) : " + f"{uoperational_ms:,.2f}")
+output.success("Safe Operation Flowrate (Nm3/h) : " + f"{Q_nm3h:,.2f}")
 
-# Developer
-st.sidebar.write('by : 👷 alias @ aliasalias85@gmail.com')
-
-# Refrence
-st.sidebar.write('Refrence : 👇 ')
-st.sidebar.write('http://www.mecha-engineeringbd.com/2022/03/erosional-velocity-of-gas-pipeline.html?m=1')
+# Developer & Refrence
+output.divider()
+output.write('Developer : 👷 alias @ aliasalias85@gmail.com')
+output.write('Refrence : Gas pipeline hydraulics, E.Shashi Menon, 2005 by Taylor & Francis')
