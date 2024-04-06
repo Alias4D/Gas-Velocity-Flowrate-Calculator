@@ -1,2 +1,2 @@
-# Gas-Flow-Calculator
-Gas Pipeline Safe Operational Velocity &amp; Flowrate Calculator
+# Gas Velocity & Flowrate Calculator
+Gas Pipeline Safe Operation Velocity &amp; Flowrate Calculator
