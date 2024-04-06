@@ -94,7 +94,7 @@ uoperational_ms = convert_velocity_to_ms(uoperational)
 # Display the results
 output.subheader('Results : 👇 ')
 output.error("Erosional Velocity (m/s) : " + f"{umax_ms:,.2f}")
-output.warning("Safe Operation Velocity (m/s) : " + f"{uoperational_ms:,.2f}")
+output.info("Safe Operation Velocity (m/s) : " + f"{uoperational_ms:,.2f}")
 output.success("Safe Operation Flowrate (Nm3/h) : " + f"{Q_nm3h:,.2f}")
 
 # Developer & Refrence
