@@ -5,5 +5,5 @@ This application calculates the safe operational velocity and flow rate for a ga
 
 # Features
 Calculates both maximum velocity and safe operational velocity
-Calculates volumetric flow rate in cubic meters per hour (m³/h) and normal cubic meters per hour (Nm³/h)
+Calculates volumetric flow rate in normal cubic meters per hour (Nm³/h)
 User-friendly interface with clear input fields and labeled results
