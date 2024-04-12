@@ -69,7 +69,7 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-input , output = st.columns(spec=2,gap="Medium")
+input , output = st.columns(spec=[0.3, 0.7],gap="Large")
 
 # Create the input fields
 Z = input.number_input("Compressibility factor (Z)", min_value=0.0, max_value=1.0,value=0.99)
