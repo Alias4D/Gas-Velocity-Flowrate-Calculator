@@ -1,8 +1,8 @@
-# Gas Pipeline Safe Operation Velocity & Flowrate Calculator
+# Clean Gas Pipeline Safe Operation Velocity & Flowrate Calculator
 
 
 # Project Overview
-This application calculates the safe operational velocity and flow rate for a gas pipeline, considering factors like compressibility factor (Z), gas temperature, pressure, gravity, and pipe diameter. It provides valuable insights for ensuring safe and efficient gas pipeline operation.
+This application calculates the safe operational velocity and flow rate for a clean gas pipeline, considering factors like compressibility factor (Z), gas temperature, pressure, gravity, and pipe diameter. It provides valuable insights for ensuring safe and efficient gas pipeline operation.
 
 
 # Features
