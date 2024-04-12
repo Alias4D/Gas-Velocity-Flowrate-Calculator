@@ -9,8 +9,8 @@ This application calculates the safe operational velocity and flow rate for a cl
 - User-friendly interface with clear input fields and labeled results
 
 # Refrence
-Book : Gas pipeline hydraulics, E.Shashi Menon, 2005 by Taylor & Francis')
-Standard : American Petroleum Institute Recommended Practice 14E (API RP 14E)
+- Book : Gas pipeline hydraulics, E.Shashi Menon, 2005 by Taylor & Francis')
+- Standard : American Petroleum Institute Recommended Practice 14E (API RP 14E)
 
 # Developed by 
 Eng. Alias @ aliasalias85@gmail.com
