@@ -51,8 +51,8 @@ def calculate_flow_rate(uoperational, D):
   return Q_m3h, Q_nm3h
 
 # Create the Streamlit app
-st.set_page_config(page_title="Gas Pipeline Safe Operation Velocity & Flowrate Calculator",page_icon="👩‍💻",layout="wide")
-st.header("Gas Pipeline Safe Operation Velocity & Flowrate Calculator")
+st.set_page_config(page_title="Clean Gas Pipeline Safe Operation Velocity & Flowrate Calculator",page_icon="👩‍💻",layout="wide")
+st.header("Clean Gas Pipeline Safe Operation Velocity & Flowrate Calculator")
 
 hide_menu_style = """
         <style>
